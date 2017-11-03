@@ -1,5 +1,10 @@
 # Practice Express + Mongo DB
-This is a practice project, with education motive.
+
+What is this? I love the hacker news and love NodeJS, If you like it too, should download it. This is a news panel with auto refresh written in Node JS with Babel 7. See more down to learn how to run it. Good luck 😁.
+
+— Jonathan
+
+----
 
 ![Preview](https://i.imgur.com/JOUDMWT.png)
 
