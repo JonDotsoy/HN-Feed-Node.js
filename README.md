@@ -3,25 +3,6 @@ This is a practice project, with education motive.
 
 ![Preview](https://i.imgur.com/JOUDMWT.png)
 
-## How to install
-
-Please install with npm
-
-```bash
-$ npm install
-```
-
-### If do you use [Docker](https://www.docker.com)
-
-Use [docker-compose](https://docs.docker.com/compose) to up mongo service
-
-```bash
-# Up the services required
-$ docker-compose up -d
-# Use without "-d" to view the logs
-$ docker-compose up
-```
-
 ### Dependencies
 
 The requirement of software:
@@ -34,22 +15,39 @@ The requirement of software:
 > - [docker](https://www.docker.com)
 > - [docker-compose](https://docs.docker.com/compose)
 
-## How to run app
+## How to install
 
-Inside of directory of the project uses the next command with npm.
+> ⚠ Go to the project folder.
+
+Use the next command line
 
 ```bash
-$ npm start
+$ npm install
 ```
 
-This command loads the `src/index.js` file. and this file is transpiled with Babel@7 (see `.babelrc.js` to read the spec).
+### Do you use [Docker](https://www.docker.com)?
+
+Use [docker-compose](https://docs.docker.com/compose) to up mongo service
+
+```bash
+# Up the services required
+$ docker-compose up -d
+# Use without "-d" to view the logs
+$ docker-compose up
+```
+
+### Up the MongoDB
+
+Please read the next article to run MongoDB.
+
+- [Article](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
 
 
 ## How to configure this app
 
-Use the `.env` file to define the configs.
+Use the `.env` file to define the configurations.
 
-> All configs are used with the environment variables.
+> All configurations are used with the environment variables.
 
 | Environment Variable | Default       | Description                      |
 | -------------------- | ------------- | -------------------------------- |
@@ -60,6 +58,24 @@ Use the `.env` file to define the configs.
 | DB_USERNAME          | _void_        | Username to connect with MongoDB |
 | HOST                 | `'::'`        | Host of the server               |
 | PORT                 | `'3000'`      | Port of the server               |
+
+Also, you can use the `set` to define the configuration in your environment. For example.
+
+```bash
+# set the port to open server
+$ set PORT=9000
+```
+
+## How to run APP
+
+To run the APP use then next command line.
+
+```bash
+$ npm start
+```
+
+This command loads the `src/index.js` file. This file is transpiled with Babel@7 (See `.babelrc.js` to read the spec).
+
 
 ## App structure
 
