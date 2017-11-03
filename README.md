@@ -8,6 +8,8 @@ What is this? I love the hacker news and love NodeJS, If you like it too, should
 
 ![Preview](https://i.imgur.com/JOUDMWT.png)
 
+> ## 🔴 LIVE PREVIEW ON HERE [hn.jon.soy](https://hn.jon.soy).
+
 ### Dependencies
 
 The requirement of software:
@@ -92,3 +94,23 @@ This command loads the `src/index.js` file. This file is transpiled with Babel@7
 - `src/resources/views`: Save the views written on Pug files.
 - `src/resources/views/articles.pug`: Render an article collection.
 - `src/resources/views/layout.pug`: Define the layout base to any renders on here has the head tag and body tag.
+
+
+## Alternative to install more easy
+
+This instruction use Docker to run the project.
+
+Please install [Docker](https://docker) and [docker-compose](https://docs.docker.com/compose) (docker-compose is included in the default docker installation)
+
+Well, If do you have Docker installed, Run the next command line.
+
+```bash
+# Load docker-compose with `docker-compose.prod.yml` file
+$ docker-compose -f docker-compose.prod.yml up -d
+# Creating hnfeedpracticeexpressmongo_db_1 ...
+# Creating hnfeedpracticeexpressmongo_db_1 ... done
+# Creating hnfeedpracticeexpressmongo_app_1 ...
+# Creating hnfeedpracticeexpressmongo_app_1 ... done
+```
+
+This builds the project and runs under Node. Also, this prepared the MongoDB.

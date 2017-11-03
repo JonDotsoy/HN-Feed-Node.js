@@ -1,0 +1,16 @@
+!.babelrc.js
+.dockerignore
+.editorconfig
+.env
+.env.example
+.git
+.gitignore
+Dockerfile
+!LICENSE
+!README.md
+docker-compose.prod.yml
+docker-compose.yml
+node_modules
+!package-lock.json
+!package.json
+!src

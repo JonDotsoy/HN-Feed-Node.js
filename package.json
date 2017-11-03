@@ -1,5 +1,5 @@
 {
-  "name": "practiceTestReignDesign",
+  "name": "hn-feed-practice-express-mongo",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",

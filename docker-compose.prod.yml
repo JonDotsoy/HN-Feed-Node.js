@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    container_name: hn-feed-practice-express-mongo-db
+    image: mongo:3.4.10
+
+  app:
+    build: .
+    image: hn-feed-practice-express-mongo:latest
+    container_name: hn-feed-practice-express-mongo-app
+    links:
+      - db:db
+    environment:
+      - DB_HOST=db
+    ports:
+      - 3000:3000
