@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
+  "engines": {
+    "node": ">= 8.9.0"
+  },
   "scripts": {
     "start": "node --require babel-register src/index.js",
     "watch": "nodemon --inspect --require babel-register src/index.js"
