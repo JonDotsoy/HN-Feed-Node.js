@@ -107,10 +107,10 @@ Well, If do you have Docker installed, Run the next command line.
 ```bash
 # Load docker-compose with `docker-compose.prod.yml` file
 $ docker-compose -f docker-compose.prod.yml up -d
-# Creating hnfeedpracticeexpressmongo_db_1 ...
-# Creating hnfeedpracticeexpressmongo_db_1 ... done
-# Creating hnfeedpracticeexpressmongo_app_1 ...
-# Creating hnfeedpracticeexpressmongo_app_1 ... done
+# Starting hn-feed-practice-express-mongo-db ...
+# Starting hn-feed-practice-express-mongo-db ... done
+# Starting hn-feed-practice-express-mongo-app ...
+# Starting hn-feed-practice-express-mongo-app ... done
 ```
 
 This builds the project and runs under Node. Also, this prepared the MongoDB.
