@@ -1,0 +1,98 @@
+extends ./layout
+
+mixin ArticleLine()
+  .div ddas
+
+block body
+  //- Custom Style
+  style.
+    .meta-passive > .-data:before {
+      content: ' — ';
+    }
+    .meta-passive > .-data:after {
+      content: ' — ';
+    }
+    .meta-passive > .-data {
+      padding-left: 10px;
+      color: grey;
+    }
+    .meta-passive > * {
+      display: inline-block;
+    }
+    
+    .btn-tash {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 10px;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    }
+    
+    th .btn-tash,
+    tr .btn-tash {
+      visibility: hidden;
+    }
+
+    th:hover .btn-tash,
+    tr:hover .btn-tash,
+    tr .btn-tash:focus {
+      visibility: visible;
+    }
+  
+  //- Script to remove an article
+  script.
+    /* Build on http://babeljs.io/repl/build/7.0/#?babili=false&browsers=&build=&builtIns=false&code_lz=Q&debug=false&circleciRepo=&evaluate=true&lineWrap=false&presets=stage-1%2Cenv&targets=Node-3.8&version=7.0.0-beta.5
+    window.addEventListener('load', () => {
+      const elms = document.querySelectorAll('.-meta-article')
+      
+      elms.forEach(elm => {
+        elm.querySelector('.btn-tash').addEventListener('click', () => {
+          $.ajax({
+            method: 'post',
+            url: `/article/${elm.dataset.idarticle}`
+          }).done(({ok}) => {
+            if (ok) {
+              elm.remove()
+            }
+          })
+        })
+      })
+    })
+    */
+    "use strict";
+    window.addEventListener('load', function () {
+      var elms = document.querySelectorAll('.-meta-article');
+      elms.forEach(function (elm) {
+        elm.querySelector('.btn-tash').addEventListener('click', function () {
+          $.ajax({
+            method: 'post',
+            url: "/article/" + elm.dataset.idarticle
+          }).done(function (_ref) {
+            var ok = _ref.ok;
+
+            if (ok) {
+              elm.remove();
+            }
+          });
+        });
+      });
+    });
+  
+  div(role='main')
+    .jumbotron
+      .container
+        hgroup
+          h1.display-3 HN Feed
+          h2 We ❤ hacker news!
+          .container
+      table.table.table-hover
+        tbody
+          each article in articles
+            if article.story_title || article.title
+              tr(data-idarticle=article.objectID).-meta-article
+                //- th(scope='row')= article.objectID
+                td.meta-passive
+                  a(href=(article.story_url || article.url) target='_blank')= article.story_title || article.title
+                  .-data= article.author
+                td(title=article.__good_title)= article.__good_date
+                td: button.btn.btn-link.btn-tash

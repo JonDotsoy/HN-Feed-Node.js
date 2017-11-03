@@ -1,0 +1,41 @@
+{
+  "name": "practiceTestReignDesign",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node --require babel-register src/index.js",
+    "watch": "nodemon --inspect --require babel-register src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonDotsoy/practice-express-mongo-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JonDotsoy/practice-express-mongo-app/issues"
+  },
+  "homepage": "https://github.com/JonDotsoy/practice-express-mongo-app#readme",
+  "description": "",
+  "dependencies": {
+    "babel-core": "^7.0.0-beta.3",
+    "babel-preset-env": "^7.0.0-beta.3",
+    "babel-preset-stage-1": "^7.0.0-beta.3",
+    "babel-register": "^7.0.0-beta.3",
+    "bootstrap": "^4.0.0-beta.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.2.1",
+    "moment": "^2.19.1",
+    "mongoose": "^4.12.6",
+    "ms": "^2.0.0",
+    "popper.js": "^1.12.6",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
