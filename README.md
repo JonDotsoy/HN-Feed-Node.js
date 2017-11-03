@@ -1,6 +1,7 @@
 # Practice Express + Mongo DB
 This is a practice project, with education motive.
 
+![Preview](https://i.imgur.com/JOUDMWT.png)
 
 ## How to install
 
