@@ -6,7 +6,7 @@ What is this? I love the hacker news and love NodeJS, If you like it too, you sh
 
 ----
 
-![Preview](https://i.imgur.com/JOUDMWT.png)
+[![Preview](https://i.imgur.com/JOUDMWT.png)](hn.jon.soy)
 
 > ## 🔴 LIVE PREVIEW ON HERE [hn.jon.soy](https://hn.jon.soy).
 
