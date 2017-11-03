@@ -10,8 +10,11 @@
     "start": "node --require babel-register src/index.js",
     "watch": "nodemon --inspect --require babel-register src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "example",
+    "project"
+  ],
+  "author": "Jonathan Delgado <hi@jon.soy> (https://jon.soy)",
   "license": "MIT",
   "repository": {
     "type": "git",
