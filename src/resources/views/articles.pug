@@ -79,12 +79,14 @@ block body
     });
   
   div(role='main')
+
     .jumbotron
       .container
         hgroup
           h1.display-3 HN Feed
           h2 We ❤ hacker news!
-          .container
+
+    .container
       table.table.table-hover
         tbody
           each article in articles
