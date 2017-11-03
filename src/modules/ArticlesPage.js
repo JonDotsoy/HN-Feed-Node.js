@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
 
   let articles
   try {
-    articles = await Article.find({__removed: false})
+    articles = await Article.find({__removed: false}).sort({ created_at: -1 })
   } catch (ex) {
     next(ex)
   }
