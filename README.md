@@ -1,10 +1,12 @@
-# HN Feed (Practice with Express + Mongo DB)
+# HN Feed (Node.js)
 
 What is this? I love the hacker news and love NodeJS, If you like it too, you should download it. This is a news panel with auto refresh written in Node JS with Babel 7. See more down to learn how to run it. Good luck 😁.
 
 — Jonathan
 
 ----
+
+Code in practice with Express + Mongo DB.
 
 [![Preview](https://i.imgur.com/JOUDMWT.png)](hn.jon.soy)
 
